@@ -19,7 +19,7 @@ public class TreeGenerationConfiguration {
         this.fruit = fruit;
         this.enableGeneration = enableGeneration;
         if (!this.enableGeneration) {
-            HarvestCraft.log.trace("generation is disabled for " + fruit);
+            //HarvestCraft.log.trace("generation is disabled for " + fruit);
             return;
         }
         this.rarity = rarity;
@@ -29,7 +29,7 @@ public class TreeGenerationConfiguration {
             if (found != null
                     && found.isPresent()
                     && !this.getBiomesAllowed().contains(found.get())) {
-                HarvestCraft.log.trace("biome added:" + found.get().getRegistryName().toString());
+                //HarvestCraft.log.trace("biome added:" + found.get().getRegistryName().toString());
                 this.biomesAllowed.add(found.get());
             }
         });

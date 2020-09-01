@@ -23,7 +23,7 @@ public class FruitTreeWorldGen implements IWorldGenerator {
     public void generate(Random random, int chunkX, int chunkZ, World world,
                          net.minecraft.world.gen.IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
         if (!fruitTreeConfigManager.enableFruitTreeGeneration) {
-            HarvestCraft.log.debug("disabled fruit tree generation");
+            //HarvestCraft.log.debug("disabled fruit tree generation");
             return;
         }
 
@@ -36,18 +36,18 @@ public class FruitTreeWorldGen implements IWorldGenerator {
         List<TreeGenerationConfiguration> fruitTreesRarity = fruitTreeConfigManager.getFruitTreesInBiomeWithLowerRarity(rarity, biome);
 
         if (fruitTreesRarity.isEmpty()) {
-            HarvestCraft.log.debug("no fruit available for biome: " + biome.getRegistryName().toString() + " with rarity < " + rarity + ".");
+            //HarvestCraft.log.debug("no fruit available for biome: " + biome.getRegistryName().toString() + " with rarity < " + rarity + ".");
             return;
         }
         int index = random.nextInt(fruitTreesRarity.size());
         if (index < 0) {
-            HarvestCraft.log.debug("is < 0");
+            //HarvestCraft.log.debug("is < 0");
             return;
         }
         TreeGenerationConfiguration fruitTree = fruitTreesRarity.get(index);
 
         if (fruitTree == null) {
-            HarvestCraft.log.debug("fruit tree is null");
+            //HarvestCraft.log.debug("fruit tree is null");
             return;
         }
 

@@ -494,7 +494,7 @@ public class ConfigHandler {
         final Matcher ITEM_STACK_MATCHER = ITEM_STACK_PATTERN.matcher("");
 
         for (String garden : gardenDropConfig.keySet()) {
-            HarvestCraft.log.info("Registering drops for {}.", garden);
+            //HarvestCraft.log.info("Registering drops for {}.", garden);
 
             final List<ItemStack> drops = new ArrayList<ItemStack>();
             final String[] itemNames = gardenDropConfig.get(garden);
@@ -516,10 +516,10 @@ public class ConfigHandler {
                     // Check to make sure we got a valid item
                     if (drop != null) {
                         drops.add(drop);
-                    } else {
+                    } /*else {
                         // Otherwise, let the user know about it...
                         HarvestCraft.log.error("Unable to find item %s to add to this garden.", baseItemName);
-                    }
+                    }*/
                 }
             }
 

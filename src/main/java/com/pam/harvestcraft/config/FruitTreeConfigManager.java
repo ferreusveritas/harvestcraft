@@ -116,7 +116,7 @@ public class FruitTreeConfigManager {
         biomeNames.append("Available/Detected biomes: ");
         for (Biome x : this.availableBiomes) {
             biomeNames.append("[" + x.getRegistryName().toString() + "], ");
-            HarvestCraft.log.info(
+            /*HarvestCraft.log.info(
                     x.getRegistryName().toString() + ";" +
                             x.getTempCategory() + ";" +
                             x.getTemperature(new BlockPos(0,0,0)) + ";" +
@@ -125,7 +125,7 @@ public class FruitTreeConfigManager {
                             x.isMutation() + ";" +
                             x.isSnowyBiome() + ";" +
                             BiomeDictionary.getTypes(x).toString()
-            );
+            );*/
 
         }
 

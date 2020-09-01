@@ -55,10 +55,10 @@ public class WailaVanillaHandler implements IWailaDataProvider {
 	@Override
 	public List<String> getWailaBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor,
 			IWailaConfigHandler config) {
-		HarvestCraft.log.info("beetroot 1");
+		//HarvestCraft.log.info("beetroot 1");
 
 		if(accessor.getBlock() instanceof BlockBeetroot) {
-			HarvestCraft.log.info("beetroot 2");
+			//HarvestCraft.log.info("beetroot 2");
 
 			final String newtip = fixBeetroot(accessor);
 			currenttip.clear();
